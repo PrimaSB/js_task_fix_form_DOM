@@ -13,7 +13,8 @@ for (const form of forms) {
     label.htmlFor = element.id;
     label.textContent = element.name;
 
-    element.placeholder = element.name.toUpperCase();
+    element.placeholder =
+      element.name[0].toUpperCase() + element.name.slice(1).toLowerCase();
 
     parentElement.appendChild(label);
   }
